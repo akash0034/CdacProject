@@ -1,0 +1,43 @@
+<h1>Client List</h1>
+
+<button  style="margin-bottom: 10px;"  class="btn btn-success pull-right" routerLink="/Client-add">Add Client</button>
+
+
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>User_id</th>
+      <th>User_Name</th>
+      <th>User_Email</th>
+      <th>User_Phone</th>
+      <th>User_Gender</th>
+     
+      <th>User_State</th>
+      <th>User_Dist</th>
+      <th>User_City</th>
+      <th>User_Pin</th>
+      <th>Actions</th>
+
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Client of Clients">
+      <td>{{Client.User_id}}</td>
+      <td>{{Client.User_Name}}</td>
+      <td>{{Client.User_Email}}</td>
+      <td>{{Client.User_Phone}}</td>
+      <td>{{Client.User_Gender}}</td>
+   
+      <td>{{Client.User_State}}</td>
+      <td>{{Client.User_Dist}}</td>
+      <td>{{Client.User_City}}</td>
+      <td>{{Client.User_Pin}}</td>
+      <td>
+        <button (click)="onDelete(Client.User_id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button>
+        <button style="margin-left: 10px;" class="btn btn-warning"><i class="glyphicon glyphicon-pencil"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</table>

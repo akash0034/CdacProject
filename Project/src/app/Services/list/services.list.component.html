@@ -1,0 +1,27 @@
+<h1>Services Type</h1>
+<div class="container">
+  <div class="form-group">
+    <a routerLink="/services-add" class="btn btn-success pull-right">Add Services</a>
+  </div> 
+  <br><br>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Service_id</th>
+        <th>Services_Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let services of servicess">
+        <td>{{services.Service_id}}</td>
+        <td>{{services.Services_Name}}</td>
+        <td>
+          <button style="margin-left: 10px;" (click)="onDelete(services.Service_id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button>
+          <button style="margin-left: 10px;" class="btn btn-warning"><i class="glyphicon glyphicon-pencil"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

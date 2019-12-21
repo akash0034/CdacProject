@@ -1,0 +1,66 @@
+<h1>Farmer Registration</h1>
+
+
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <div class="login">
+
+      <div class="form">
+        <div class="form-group">
+          <label for="">Name</label>
+          <input [(ngModel)]="User_Name" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Email</label>
+          <input [(ngModel)]="User_Email" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="">Phone No</label>
+            <input [(ngModel)]="User_Phone" type="text" class="form-control">
+          </div>
+
+          <div class="form-group">
+              <label for="">Gender</label>
+              <select [(ngModel)]="User_Gender" class="form-control">
+                <option [value]="Male">Male</option>.
+                <option [value]="Female">Female</option>
+              </select>
+            </div>
+
+
+            <div class="form-group">
+              <label for="">State</label>
+              <input [(ngModel)]="User_Satate" type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="">District</label>
+              <input [(ngModel)]="User_Dist" type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="">City</label>
+              <input [(ngModel)]="User_City" type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="">Pin</label>
+              <input [(ngModel)]="User_Pin" type="text" class="form-control">
+            </div>
+
+        <div class="form-group">
+          <label for="">Password</label>
+          <input [(ngModel)]="User_Password" type="password" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <button (click)="register()" class="btn btn-success">Register</button>
+          <a routerLink="/Client-login" class="btn btn-danger pull-right">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4"></div>
+</div>

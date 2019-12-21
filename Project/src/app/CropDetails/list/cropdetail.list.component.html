@@ -1,0 +1,42 @@
+<h1>Crop Details</h1>
+<div class="container">
+  <div class="form-group">
+    <a routerLink="/cropdetails-add" class="btn btn-success pull-right">Add Crop </a>
+  </div> 
+  <br><br>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Crop Id</th>
+        <th>CropType id</th>
+        <th>Crop Sesaon</th>
+        <th>Crop Category</th>
+        <th>Crop Name</th>
+        <th>Crop Info</th>
+        <th>Crop Price</th>
+        <th>Crop Img</th>
+
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let CropDetails of cropDetaliss">
+        <td>{{CropDetails.Crop_id}}</td>
+        <td>{{CropDetails.CropType_id}}</td>
+        <td>{{CropDetails.Crop_Sesaon}}</td>
+        <td>{{CropDetails.Crop_Category}}</td>
+        <td>{{CropDetails.Crop_Name}}</td>
+        <td>{{CropDetails.Crop_Info}}</td>
+        <td>{{CropDetails.Crop_Price}}</td>
+        <td><img src="http://localhost:4000/{{CropDetails.Crop_Img}}" alt=""></td>
+       
+
+        <td>
+          <button style="margin-left: 10px;" (click)="onDelete(CropDetails.Crop_id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button>
+          <button style="margin-left: 10px;" class="btn btn-warning"><i class="glyphicon glyphicon-pencil"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

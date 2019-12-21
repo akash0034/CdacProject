@@ -1,0 +1,69 @@
+<h1>Add Farmer</h1>
+
+
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <div class="login">
+
+      <div class="form">
+        <div class="form-group">
+          <label for="">Name</label>
+          <input [(ngModel)]="User_Name" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Email</label>
+          <input [(ngModel)]="User_Email" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="">Phone No</label>
+          <input [(ngModel)]="User_Phone" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="">Gender</label>
+          <select [(ngModel)]="User_Gender" type="text" class="form-control">
+            <option value="Male">Male</option>.
+            <option value="Female">Female</option>
+          </select>
+        </div>
+
+
+        <div class="form-group">
+          <label for="">State</label>
+          <input [(ngModel)]="User_State" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="">District</label>
+          <input [(ngModel)]="User_Dist" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="">City</label>
+          <input [(ngModel)]="User_City" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="">Pin</label>
+          <input [(ngModel)]="User_Pin" type="number" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="">Password</label>
+          <input [(ngModel)]="User_Password" type="password" class="form-control">
+        </div>
+
+        <div class="row">
+
+          <button (click)="Onregister()" class="btn btn-success">Add</button>
+          <a style="margin-left: 10px;" routerLink="/adminHome" class="btn btn-danger">Cancel</a>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4"></div>
+</div>

@@ -1,0 +1,87 @@
+<h1>Add Trading Type</h1>
+
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="login">
+
+
+
+                <div class="form-group">
+                        <label for="">Select Trader</label>
+                        <select [(ngModel)]="Tr_id"  class="form-control">
+                        <option
+                        *ngFor="let Trader of Traders"
+                        [value]="Trader.Tr_id">{{Trader.Tr_name}}</option>
+                        </select>
+
+
+                        <div class="form-group">
+                                <label for="">Select Trading Type</label>
+                                <select [(ngModel)]="TradingType_id"  class="form-control">
+                                <option
+                                *ngFor="let Trtype of Trtypes"
+                                [value]="Trtype.TradingType_id">{{Trtype.Trader_Name}}</option>
+                                </select>
+
+
+                                <div class="form-group">
+                                        <label for="">Select Seed</label>
+                                        <select [(ngModel)]="Seed_id"  class="form-control">
+                                        <option
+                                        *ngFor="let seed of seeds"
+                                        [value]="seed.Seed_id">{{seed.Seed_Name}}</option>
+                                        </select>
+
+                                        <div class="form-group">
+                                                <label for="">Select Fertiliser</label>
+                                                <select [(ngModel)]="Fertiliser_id"  class="form-control">
+                                                <option
+                                                *ngFor="let Fert of Ferts"
+                                                [value]="Fert.Fertiliser_id">{{Fert.Fertiliser_name}}</option>
+                                                </select>
+
+
+                                                
+
+                <div class="form-group">
+                        <label for="">Select Crop Type</label>
+                        <select [(ngModel)]="Crop_id"  class="form-control">
+                        <option
+                        *ngFor="let Crop of crops"
+                        [value]="Crop.Crop_id">{{Crop.Crop_Name}}</option>
+                        </select>
+
+                        <div class="form-group">
+                                <label for="">Select Service</label>
+                                <select [(ngModel)]="Service_id"  class="form-control">
+                                <option
+                                *ngFor="let Services of Servicess"
+                                [value]="Services.Service_id">{{Services.Services_Name}}</option>
+                                </select>
+
+             <div class="form-group">
+                                <label for="">Select User</label>
+                                <select [(ngModel)]="User_id"  class="form-control">
+                                <option
+                                *ngFor="let User of Users"
+                                [value]="User.User_id">{{User.User_Name}}</option>
+                                </select>
+
+
+                <div class="form">
+                        <div class="form-group">
+                            <label for="">Trading Price</label>
+                            <input [(ngModel)]="Trading_price" type="number" class="form-control">
+                        </div>
+
+                <div class="form-group">
+                    <button (click)="onTradingAdd()" class="btn btn-success">Add Price</button>
+                    <a routerLink="/trading-list" class="btn btn-danger pull-right">Cancel</a>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+</div>

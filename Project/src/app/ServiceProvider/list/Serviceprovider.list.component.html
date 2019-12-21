@@ -1,0 +1,33 @@
+<h1>Seed Type</h1>
+<div class="container">
+  <div class="form-group">
+    <a routerLink="/servicepr-add" class="btn btn-success pull-right">Add Service Provider</a>
+  </div> 
+  <br><br>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+
+        <th>ServicePr_id</th>
+        <th>Service_id</th>
+        <th>PerDayPrice</th>
+        <th>Instruction</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Servicep of Servicepr">
+        <td>{{Servicep.ServicePr_id}}</td>
+        <td>{{Servicep.Service_id}}</td>
+        <td>{{Servicep.PerDayPrice}}</td>
+        <td>{{Servicep.Instruction}}</td>
+
+        <td>
+          <button style="margin-left: 10px;" (click)="onDelete(Servicep.ServicePr_id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button>
+          <button style="margin-left: 10px;" class="btn btn-warning"><i class="glyphicon glyphicon-pencil"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

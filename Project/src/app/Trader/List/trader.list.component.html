@@ -1,0 +1,35 @@
+<h1>Trader List</h1>
+
+<button  style="margin-bottom: 10px;"  class="btn btn-success pull-right" routerLink="/Trader-add">Add Trader</button>
+
+
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Tr_name</th>
+      <th>Tr_Address</th>
+      <th>Tr_Email</th>
+      <th>Tr_Phone</th>
+      <th>Tr_Catagory</th>
+      <th>Tr_password</th>
+      <th>Actions</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Trader of Traders">
+      <td>{{Trader.Tr_id}}</td>
+      <td>{{Trader.Tr_Address}}</td>
+      <td>{{Trader.Tr_Email}}</td>
+      <td>{{Trader.Tr_Phone}}</td>
+      <td>{{Trader.Tr_Catagory}}</td>
+      <td>{{Trader.Tr_password}}</td>
+    
+      <td>
+        <button (click)="onDelete(Trader.Tr_id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button>
+        <button style="margin-left: 10px;" class="btn btn-warning"><i class="glyphicon glyphicon-pencil"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</table>

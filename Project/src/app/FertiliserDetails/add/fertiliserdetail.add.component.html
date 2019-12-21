@@ -1,0 +1,56 @@
+<h1>Add Fertiliser</h1>
+
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="login">
+
+            <div class="form">
+                <div class="form-group">
+                    <label for="">Crop id</label>
+                    <input [(ngModel)]="Crop_id" type="text" class="form-control">
+                </div>
+
+                <div class="form">
+                    <div class="form-group">
+                        <label for="">Fertiliser_Category</label>
+                        <input [(ngModel)]="Fertiliser_Category" type="text" class="form-control">
+                    </div>
+                    <div class="form">
+                        <div class="form-group">
+                            <label for="">Fertiliser_Brand</label>
+                            <input [(ngModel)]="Fertiliser_Brand" type="text" class="form-control">
+                        </div>
+                        <div class="form">
+                            <div class="form-group">
+                                <label for="">Fertiliser_Oncrop</label>
+                                <input [(ngModel)]="Fertiliser_Oncrop" type="text" class="form-control">
+                            </div>
+                            <div class="form">
+                                <div class="form-group">
+                                    <label for="">Fertiliser_Info</label>
+                                    <input [(ngModel)]="Fertiliser_Info" type="text" class="form-control">
+                                </div>
+                                <div class="form">
+                                    <div class="form-group">
+                                        <label for="">Fertiliser_Price</label>
+                                        <input [(ngModel)]="Fertiliser_Price" type="text" class="form-control">
+                                    </div>
+                                   
+
+                                        <div class="form-group">
+                                            <label for="">Select Fertiliser Image</label>
+                                            <input (change)="onSelectFile($event)" type="file" class="form-control">
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <button (click)="onFertAdd()" class="btn btn-success">Add Fertiliser</button>
+                                            <a routerLink="/adminHome" class="btn btn-danger pull-right">Cancel</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>

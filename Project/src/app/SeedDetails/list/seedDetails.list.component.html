@@ -1,0 +1,33 @@
+<h1>Seed Type</h1>
+<div class="container">
+  <div class="form-group">
+    <a routerLink="/seed-add" class="btn btn-success pull-right">Add Seed Type</a>
+  </div> 
+  <br><br>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+
+        <th>Seed id</th>
+        <th>Crop id</th>
+        <th>Seed Name</th>
+        <th>Seed Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let seedDetails of seedDetailss">
+        <td>{{seedDetails.Seed_id}}</td>
+        <td>{{seedDetails.Crop_id}}</td>
+        <td>{{seedDetails.Seed_Name}}</td>
+        <td>{{seedDetails.Seed_Price}}</td>
+
+        <td>
+          <button style="margin-left: 10px;" (click)="onDelete(seedDetails.Seed_id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button>
+          <button style="margin-left: 10px;" class="btn btn-warning"><i class="glyphicon glyphicon-pencil"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

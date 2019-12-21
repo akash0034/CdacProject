@@ -1,0 +1,46 @@
+<h1>Tradings</h1>
+<div class="container">
+  <div class="form-group">
+    <a routerLink="/Trading-add" class="btn btn-success pull-right">Add Tradings</a>
+  </div> 
+  <br><br>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+
+        <th>Trading Id</th>
+        <th>Trder Name</th>
+        <th>TradingType</th>
+        <th>Seed</th>
+        <th>Fertiliser</th>
+        <th>Crop</th>
+        <th>Service</th>
+        <th>User</th>
+        <th>Trading_price</th>
+        <th>Actions</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Trading of Tradings">
+        <td>{{Trading.Trading_id}}</td>
+        <td>{{Trading.Tr_name}}</td>
+        <td>{{Trading.Trader_Name}}</td>
+        <td>{{Trading.Seed_Name}}</td>
+        <td>{{Trading.Fertiliser_name}}</td>
+        <td>{{Trading.Crop_Name}}</td>
+        <td>{{Trading.Services_Name}}</td>
+        <td>{{Trading.User_Name}}</td>
+        <td>{{Trading.Trading_price}}</td>
+        
+
+
+        <td>
+          <button style="margin-left: 10px;" (click)="onDelete(Trading.Trading_id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button>
+          <button style="margin-left: 10px;" class="btn btn-warning"><i class="glyphicon glyphicon-pencil"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
